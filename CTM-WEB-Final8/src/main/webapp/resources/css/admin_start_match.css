@@ -2,17 +2,18 @@
 /* Your CSS exactly as given */
 :root {
   --bg-start: #0f172a;
-  --bg-end: #0b1120;
-  --panel: rgba(15, 23, 42, 0.85);
-  --panel-light: rgba(30, 41, 59, 0.82);
-  --panel-soft: rgba(15, 23, 42, 0.7);
+  --bg-end: #1e3a8a;
+  --panel: rgba(30, 41, 59, 0.85);
+  --panel-light: rgba(30, 41, 59, 0.72);
+  --panel-soft: rgba(15, 23, 42, 0.45);
   --text: #f8fafc;
   --muted: #94a3b8;
   --accent: #38bdf8;
-  --accent-strong: #6366f1;
-  --success: #34d399;
+  --accent-strong: #3b82f6;
+  --accent-glow: #60a5fa;
+  --success: #22c55e;
   --warning: #fbbf24;
-  --danger: #f87171;
+  --danger: #ef4444;
 }
 
 * { box-sizing: border-box; }
@@ -21,20 +22,22 @@
 
 body {
   font-family: "Poppins", "Segoe UI", sans-serif;
-  background: linear-gradient(150deg, var(--bg-start), var(--bg-end));
+  background: linear-gradient(160deg, var(--bg-start) 0%, rgba(15, 23, 42, 0.95) 45%, var(--bg-end) 100%);
   color: var(--text);
   margin: 0;
   min-height: 100vh;
+  line-height: 1.6;
 }
 
 /* ... all your styles ... */
 
 @media (max-width: 780px) {
   .top { flex-direction: column; gap: 12px; text-align: center; }
-  .wrap { margin: 28px 16px; padding: 28px; }
+  .wrap { margin: 28px 16px; padding: 30px; }
   .form-inline { flex-direction: column; align-items: stretch; }
   ul.menu { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
   .container, .auth-card { margin: 60px 16px; padding: 32px 26px; }
+  table { font-size: 0.95rem; }
 }
 
 /* ===== Custom additions for Start Match ===== */
